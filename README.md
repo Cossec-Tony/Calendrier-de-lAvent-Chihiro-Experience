@@ -20,5 +20,6 @@ Pour rester fidèles à l’œuvre originale, on a tout fait à la main, sans IA
 Tous les assets graphiques, le logo et la charte ont été conçus par l’équipe en 1 semaine. Le projet est accompagné d’un dossier complet : wireframes papier, maquettes Figma interactives, user flow et tests utilisateurs menés auprès d'un échantillon d’étudiants.
 <img width="4000" height="2668" alt="logoChihiro" src="https://github.com/user-attachments/assets/df991c6e-0cc4-427c-936f-b6d69e6b4d2b" />
 <img width="6000" height="4500" alt="MobileChihiro" src="https://github.com/user-attachments/assets/9ab4d1be-e8f2-48dd-a8da-c5df94377aa7" />
+![Doc du dispositif Chihiro final](https://github.com/user-attachments/assets/a834128c-685a-4225-8c58-5bbe44728157)
 ![CharteGraphiqueVoyageDeChihiro](https://github.com/user-attachments/assets/2a0108a9-e9c7-41ea-bf77-ae912b5c1825)
 
