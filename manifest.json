@@ -1,0 +1,16 @@
+{
+  "name": "Calendrier Chihiro",
+  "short_name": "Chihiro",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#95213",
+  "theme_color": "#95213",
+  "icons": [
+    {
+      "src": "./assets/utils/LogoChihiro.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

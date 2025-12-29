@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="Chihiro Noel" />
+
+    <meta name="theme-color" content="#000000" />
+
+    <title>Jour 1 : Le Contrat</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Amatic+SC:wght@700&family=Courier+Prime:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <audio id="typing-sound" src="assets/sounds/typing.mp3" loop></audio>
+    <audio id="brush-sound" src="assets/sounds/brush.mp3" loop></audio>
+    <audio id="magic-sound" src="assets/sounds/magic.mp3"></audio>
+    <audio
+      id="soundDesignHome"
+      src="assets/sounds/soundDesignHome.mp3"
+      loop
+      autoplay
+    ></audio>
+
+    <div id="game-container">
+      <div id="loading-layer">
+        <img src="assets/gif/chargement.gif" alt="Chargement..." />
+        <p>Chargement du monde des esprits...</p>
+      </div>
+
+      <div id="scene-intro-layer" class="hidden">
+        <img
+          src="assets/gif/sceneIntro.gif"
+          class="full-screen-bg"
+          alt="Le pont"
+        />
+        <div class="intro-overlay">
+          <p class="intro-text">
+            Voici l'établissement des bains de Yubaba.<br />Tu t'y rends, sans
+            vraiment savoir ce qui t'y attend...
+          </p>
+          <button id="enter-btn" class="action-btn">
+            RENTRE VITE IL PLEUT
+          </button>
+        </div>
+      </div>
+
+      <div id="intro-layer" class="hidden">
+        <img src="assets/gif/ouverturePorte.gif" id="intro-gif" alt="Portes" />
+      </div>
+
+      <div
+        id="background-layer"
+        style="background-image: url('assets/background/bureauYubaba.jpg')"
+      ></div>
+
+      <div id="character-layer">
+        <img
+          src="assets/utils/yubaba.png"
+          id="character-img"
+          style="transition: opacity 0.5s"
+        />
+      </div>
+
+      <div class="menu-layer-top">
+        <div class="bois">
+          <img src="assets/background/FondEnBois.png" alt="Bois" />
+        </div>
+        <div class="calendrier">
+          <img src="../assets/utils/LogoChihiro.png" alt="Logo" />
+          <p>Jour</p>
+          <img src="./assets/utils/Jour1.png" alt="1" />
+        </div>
+      </div>
+      <div class="menu-layer-bottom">
+        <div class="bois">
+          <img src="assets/background/FondEnBois.png" alt="Bois" />
+        </div>
+        <div class="calendrier">
+          <div class="day active-day" data-day="1">
+            <img class="day-img" src="./assets/utils/jour1flat.png" alt="1" />
+          </div>
+          <div class="day" data-day="2">
+            <img class="day-img" src="./assets/utils/jour2flat.png" alt="2" />
+            <img
+              src="./assets/utils/cadenas.png"
+              alt="cadenas"
+              class="lock-icon"
+            />
+          </div>
+          <div class="day" data-day="3">
+            <img class="day-img" src="./assets/utils/jour3flat.png" alt="3" />
+            <img
+              src="./assets/utils/cadenas.png"
+              alt="cadenas"
+              class="lock-icon"
+            />
+          </div>
+          <div class="day" data-day="4">
+            <img class="day-img" src="./assets/utils/jour4flat.png" alt="4" />
+            <img
+              src="./assets/utils/cadenas.png"
+              alt="cadenas"
+              class="lock-icon"
+            />
+          </div>
+          <div class="day" data-day="5">
+            <img class="day-img" src="./assets/utils/jour5flat.png" alt="5" />
+            <img
+              src="./assets/utils/cadenas.png"
+              alt="cadenas"
+              class="lock-icon"
+            />
+          </div>
+          <div class="day" data-day="6">
+            <img class="day-img" src="./assets/utils/jour6flat.png" alt="6" />
+            <img
+              src="./assets/utils/cadenas.png"
+              alt="cadenas"
+              class="lock-icon"
+            />
+          </div>
+          <div class="day" data-day="7">
+            <img class="day-img" src="./assets/utils/jour7flat.png" alt="7" />
+            <img
+              src="./assets/utils/cadenas.png"
+              alt="cadenas"
+              class="lock-icon"
+            />
+          </div>
+          <div class="day" data-day="8">
+            <img class="day-img" src="./assets/utils/jour1flat.png" alt="8" />
+            <img
+              src="./assets/utils/cadenas.png"
+              alt="cadenas"
+              class="lock-icon"
+            />
+          </div>
+          <div class="day" data-day="9">
+            <img class="day-img" src="./assets/utils/jour2flat.png" alt="9" />
+            <img
+              src="./assets/utils/cadenas.png"
+              alt="cadenas"
+              class="lock-icon"
+            />
+          </div>
+          <div class="day" data-day="10">
+            <img class="day-img" src="./assets/utils/jour3flat.png" alt="10" />
+            <img
+              src="./assets/utils/cadenas.png"
+              alt="cadenas"
+              class="lock-icon"
+            />
+          </div>
+          <div class="day" data-day="11">
+            <img class="day-img" src="./assets/utils/jour4flat.png" alt="11" />
+            <img
+              src="./assets/utils/cadenas.png"
+              alt="cadenas"
+              class="lock-icon"
+            />
+          </div>
+          <div class="day" data-day="12">
+            <img class="day-img" src="./assets/utils/jour5flat.png" alt="12" />
+            <img
+              src="./assets/utils/cadenas.png"
+              alt="cadenas"
+              class="lock-icon"
+            />
+          </div>
+          <div class="day" data-day="13">
+            <img class="day-img" src="./assets/utils/jour6flat.png" alt="13" />
+            <img
+              src="./assets/utils/cadenas.png"
+              alt="cadenas"
+              class="lock-icon"
+            />
+          </div>
+          <div class="day" data-day="14">
+            <img class="day-img" src="./assets/utils/jour7flat.png" alt="14" />
+            <img
+              src="./assets/utils/cadenas.png"
+              alt="cadenas"
+              class="lock-icon"
+            />
+          </div>
+          <div class="day" data-day="15">
+            <img class="day-img" src="./assets/utils/jour1flat.png" alt="15" />
+            <img
+              src="./assets/utils/cadenas.png"
+              alt="cadenas"
+              class="lock-icon"
+            />
+          </div>
+          <div class="day" data-day="16">
+            <img class="day-img" src="./assets/utils/jour2flat.png" alt="16" />
+            <img
+              src="./assets/utils/cadenas.png"
+              alt="cadenas"
+              class="lock-icon"
+            />
+          </div>
+          <div class="day" data-day="17">
+            <img class="day-img" src="./assets/utils/jour3flat.png" alt="17" />
+            <img
+              src="./assets/utils/cadenas.png"
+              alt="cadenas"
+              class="lock-icon"
+            />
+          </div>
+          <div class="day" data-day="18">
+            <img class="day-img" src="./assets/utils/jour4flat.png" alt="18" />
+            <img
+              src="./assets/utils/cadenas.png"
+              alt="cadenas"
+              class="lock-icon"
+            />
+          </div>
+          <div class="day" data-day="19">
+            <img class="day-img" src="./assets/utils/jour5flat.png" alt="19" />
+            <img
+              src="./assets/utils/cadenas.png"
+              alt="cadenas"
+              class="lock-icon"
+            />
+          </div>
+          <div class="day" data-day="20">
+            <img class="day-img" src="./assets/utils/jour6flat.png" alt="20" />
+            <img
+              src="./assets/utils/cadenas.png"
+              alt="cadenas"
+              class="lock-icon"
+            />
+          </div>
+          <div class="day" data-day="21">
+            <img class="day-img" src="./assets/utils/jour21flat.png" alt="21" />
+            <img
+              src="./assets/utils/cadenas.png"
+              alt="cadenas"
+              class="lock-icon"
+            />
+          </div>
+          <div class="day" data-day="22">
+            <img class="day-img" src="./assets/utils/jour22flat.png" alt="22" />
+            <img
+              src="./assets/utils/cadenas.png"
+              alt="cadenas"
+              class="lock-icon"
+            />
+          </div>
+          <div class="day" data-day="23">
+            <img class="day-img" src="./assets/utils/jour23flat.png" alt="23" />
+            <img
+              src="./assets/utils/cadenas.png"
+              alt="cadenas"
+              class="lock-icon"
+            />
+          </div>
+          <div class="day" data-day="24">
+            <img class="day-img" src="./assets/utils/jour24flat.png" alt="24" />
+            <img
+              src="./assets/utils/cadenas.png"
+              alt="cadenas"
+              class="lock-icon"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="item-layer" class="hidden">
+        <p class="nomObjet">Pinceau</p>
+        <img src="assets/utils/Pinceau2.png" id="item-img" alt="Pinceau" />
+        <p class="explicationObjet">
+          Un vulgaire pinceau servant à écrire toute sorte de choses...
+        </p>
+        <div class="item-hint">
+          Récupérer le présent
+          <img
+            class="cadeauIcon"
+            src="./assets/utils/cadeauIcon.png"
+            alt="icone cadeau"
+          />
+        </div>
+      </div>
+
+      <div id="cleaning-layer" class="hidden">
+        <div class="cleaning-area">
+          <p class="cleaning-instructions" id="cleaning-hint">
+            Frotte l'assiette avec ton chiffon
+          </p>
+          <div class="dish-frame">
+            <img
+              src="assets/utils/AssietteSale.png"
+              id="dish-dirty"
+              class="dish-img"
+              alt="Assiette sale"
+            />
+            <img
+              src="assets/utils/AssiettePropre.png"
+              id="dish-clean"
+              class="dish-img hidden"
+              alt="Assiette propre"
+            />
+          </div>
+          <div class="cleaning-progress">
+            <div class="cleaning-progress-bar" id="cleaning-progress-bar"></div>
+          </div>
+          <div id="cleaning-message" class="cleaning-message hidden">
+            Tu as effectué ta tâche avec succès
+          </div>
+          <button id="finish-btn" class="action-btn hidden">TERMINER</button>
+        </div>
+        <img src="assets/utils/Chiffon2.png" id="custom-cursor" alt="Chiffon" />
+      </div>
+
+      <div id="magic-layer" class="hidden">
+        <img src="" id="magic-gif" alt="Magie" />
+      </div>
+
+      <div id="contract-container" class="hidden">
+        <img
+          src="assets/utils/contratEcrit.png"
+          id="contract-img"
+          alt="Contrat"
+        />
+        <canvas id="signature-canvas"></canvas>
+        <img src="assets/utils/Pinceau2.png" id="pen-cursor" alt="Stylo" />
+      </div>
+
+      <div id="end-layer" class="hidden">
+        <img
+          src="assets/gif/sceneFinJourne.gif"
+          class="full-screen-bg"
+          alt="Fin"
+        />
+        <div class="end-overlay">
+          <p class="end-text">
+            Tu as signé le contrat de Yubaba.<br />Ton aventure dans le monde
+            des esprits ne fait que commencer...
+          </p>
+          <p>Reviens demain pour la suite de ton aventure.</p>
+          <button id="end-btn" class="action-btn">CONTINUER L'AVENTURE</button>
+        </div>
+      </div>
+
+      <div id="ui-layer" class="hidden">
+        <div class="dialogue-box style-yubaba" id="dialogue-box">
+          <div class="name-tag" id="name-tag">YUBABA</div>
+          <p class="text-content" id="text-content"></p>
+          <div class="next-indicator" id="next-btn">
+            <img
+              src="./assets/utils/fleche.png"
+              alt="fleche"
+              class="nextArrow"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
