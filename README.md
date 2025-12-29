@@ -18,3 +18,4 @@ L’expérience se décline en trois moments clés :
 
 Pour rester fidèles à l’œuvre originale, on a tout fait à la main, sans IA.
 Tous les assets graphiques, le logo et la charte ont été conçus par l’équipe en 1 semaine. Le projet est accompagné d’un dossier complet : wireframes papier, maquettes Figma interactives, user flow et tests utilisateurs menés auprès d'un échantillon d’étudiants.
+<img width="6000" height="4500" alt="MobileChihiro" src="https://github.com/user-attachments/assets/9ab4d1be-e8f2-48dd-a8da-c5df94377aa7" />
